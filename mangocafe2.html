@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Mango Cafe</title>
+        <meta charset="utf-8">
+        <style>
+            /* 동영상 배경을 활용한 메인페이지 작성 */
+            #video {
+                position: fixed; /* 브라우저 창에 고정시킨다 */
+                right: 0;
+                bottom: 0;
+                min-height: 100%;
+                min-width: 100%;
+
+            }
+            .slogan {
+                background-color: rgba(0,0,0,0.5);
+                color: white;
+                padding-left: 50px;
+                padding-right: 50px;
+                text-align: center;
+                /* 영역안에서 가운데 위치하도록 조정 */
+                position: absolute; /* 자기 영역만 크기를 가짐 */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            h1{
+                font-style: italic;
+                font-family: 'Book Antiqua', cursive;
+                margin-bottom: 0;
+
+            }
+            h3{
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+                padding: 10px 0 10px 0; /* top right bottom left */
+                margin-top: 0;
+                margin-bottom: 5px;    
+            }
+            p{
+                color: coral;
+                font-size: 130%;
+            }
+            .slogan > button {
+                border: none;
+                background-color: #ddd;
+                color: black;
+                padding: 10px 25px; /* top/bottom left/right */
+                cursor: pointer;
+            }
+            .slogan > button:hover {    /* 마우스를 올렸을때*/
+                background-color: orangered;
+                color: white;
+            }
+            #play{
+                position: absolute;
+                top: 0;
+                right: 0;
+                border: none;
+                background-color: black;
+                color: white;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <video autoplay muted loop id="video">
+            <source src="coffeeshop.mp4" type="video/mp4">
+        </video>
+            <div class="slogan">
+                <h1>Fall in love</h1>
+                <h3>with Mango Coffee</h3>
+                <button>Our Coffee</button>
+                <p>Open 10am to 11pm, Mon - Sat</p>
+            </div>
+            <button id="play" onclick="control()">Pause</button>
+            
+            <script>
+                var video= document.getElementById("video");
+                var btn= document.getElementById("play");
+
+                function control(){
+                    if(video.paused){
+                        video.play();
+                        btn.innerHTML= "Pause";
+                    }else{
+                        video.pause();
+                        btn.innerHTML= "Play";
+                    }
+                }
+            </script>
+    </body>
+</html>
+
+
+
+
