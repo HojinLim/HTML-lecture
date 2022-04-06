@@ -1,0 +1,34 @@
+
+    body {
+        width: 1000px;
+        text-align: center;
+    }
+    .main{
+        width: 80%;
+        margin-left: 80px;
+    }
+    h1 {
+        color: blue;
+        border-bottom: 1px solid green;
+    }
+    p#para1{
+        color: blue;
+    }
+    .para2{
+        color: blueviolet;
+    }
+    span {
+        color:blue;
+    }
+    .actor{
+        color: darkgreen;
+    }
+    .ganster > h2{  /* > 기호는 자식 */
+        border-bottom: 2px solid red;
+    }
+    .ganster .actor { /* 한칸 띄우기 한 것은 자손 */
+        color: darkorange;
+    }
+    .para10{
+        font-weight: bold;
+    }
