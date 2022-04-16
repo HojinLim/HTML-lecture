@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Flexbox Layout</title>
+        <meta charset="utf-8">
+        <style>
+            .flex-container {
+                background-color: orange;
+                height: 800px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: stretch;
+                align-content: space-between;
+                flex-wrap: wrap;
+            }
+            .flex-container > div { /* flex items */
+                background-color: #f1f1f1;
+                margin: 10px;
+                padding: 20px;
+                font-size: 50px;
+                height: 50px;
+            }
+            .item1 {
+                flex: 1;    /* flex-grow: 1 flex-shirink: 1 flex-basis: 0 */
+            }
+            .item2 {
+                flex: 2;
+            }
+            .item3 {
+                flex: none; /* flex-grow: 0 flex-shirink: 0 flex-basis: auto */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="item1">1</div>
+            <div class="item2" style="height: 100px">2</div>
+            <div class="item3">3</div>
+            <!--
+            <div class="item4">4</div>
+            <div class="item5">5</div>
+            <div class="item6">6</div>
+            <div class="item7">7</div>
+            <div class="item8">8</div>
+            <div class="item9">9</div> -->
+        </div>
+    </body>
+</html>
